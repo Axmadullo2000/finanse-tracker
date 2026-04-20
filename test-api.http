@@ -1,0 +1,19 @@
+### Register a new user
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "axmad",
+  "password": "secret123",
+  "email": "axmad@test.com"
+}
+
+
+### 2. Login
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+username=axmad&password=secret123
+
+### 3. Verify session works
+GET http://localhost:8080/api/auth/me
